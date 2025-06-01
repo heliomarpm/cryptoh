@@ -45,7 +45,7 @@ graph TD
 
 ## 📦 Configuração do `semantic-release`
 
-- Definida via arquivo [`.releaserc`](../../.releaserc)
+- Definida via arquivo [`.releaserc.json`](../../.releaserc.json)
 - Gera release somente na branch `main`.
 - Utiliza convenção de commits para determinar o tipo de versão (`major`, `minor`, `patch`).
 

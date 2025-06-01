@@ -44,7 +44,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          # npx vitest --coverage  --outputFile=coverage/coverage-summary.json
+          # npx vitest run --coverage  --outputFile=coverage/coverage-summary.json
           npx vitest run --coverage
           mkdir -p coverage/lcov-report
 

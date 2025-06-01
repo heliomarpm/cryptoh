@@ -10,7 +10,7 @@ on:
   #   branches: [main]
   #   paths:
   #     - 'src/**'
-  #     - '.releaserc'
+  #     - '.releaserc*'
   #     - 'package.json'
   #     - 'package-lock.json'
   #     - '.github/workflows/2.release.yml'
@@ -20,7 +20,7 @@ on:
   #   types: [closed]
   #   paths:
   #     - 'src/**'
-  #     - '.releaserc'
+  #     - '.releaserc*'
   #     - 'package.json'
   #     - 'package-lock.json'
   #     - '.github/workflows/*release.yml'
