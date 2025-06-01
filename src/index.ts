@@ -1,16 +1,33 @@
 /**
- * Template inicial para construção de bibliotecas em TypeScript
- *
- * @author Heliomar P. Marques
+ * CryptoH - A clean and easy-to-use cryptography helper library for Node.js
+ * @category Core
+ * @module cryptoh
+ * @author Heliomar Marques
  */
-import { capitalize, reverseString } from "./utils";
+import cryptoh, { HashAlgorithm, KeyPair } from "./core/cryptoh";
 
-/**
- * Classe principal da biblioteca, pode ser utilizada para instanciar objetos
- *
- * @default
- */
-export default {
-	capitalize,
-	reverseString,
-};
+const {
+	/**
+	 * Hashing functions for generating and comparing hashes.
+	 * @category Functions
+	 */
+	hash,
+	/**
+	 * Random number generation functions for generating salts and random values.
+	 * @category Functions
+	 */
+	random,
+	/**
+	 * Key pair generation functions for creating RSA key pairs.
+	 * @category Functions
+	 */
+	keyPair,
+	/**
+	 * Digital signature functions for generating and verifying signatures.
+	 * @category Functions
+	 */
+	sign,
+} = cryptoh;
+
+export default cryptoh;
+export { hash, random, keyPair, sign, KeyPair, HashAlgorithm };

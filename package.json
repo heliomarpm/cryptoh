@@ -1,34 +1,31 @@
 {
   "private": true,
-  "name": "@heliomarpm/tslib-template",
-  "version": "1.1.0",
-  "description": "Template for TypeScript libraries: semantic commits, documentation with TypeDoc, CI/CD with GitHub Actions and automatic publishing to npm — pre-configured with Husky, Vitest and Conventional Changelog.",
+  "name": "@heliomarpm/cryptoh",
+  "version": "0.0.0",
+  "description": "A clean and easy-to-use cryptography helper library for Node.js, built on top of the native crypto module.",
   "author": "Heliomar P. Marques",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "homepage": "https://github.com/heliomarpm/tslib-template#readme",
+  "homepage": "https://github.com/heliomarpm/cryptoh#readme",
   "bugs": {
-    "url": "https://github.com/heliomarpm/tslib-template/issues"
+    "url": "https://github.com/heliomarpm/cryptoh/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heliomarpm/tslib-template.git"
+    "url": "git+https://github.com/heliomarpm/cryptoh.git"
   },
   "keywords": [
-    "tslib",
+    "cryptoh",
+    "crypto",
+    "cryptography",
+    "hash",
+    "rsa",
+    "nodejs",
     "typescript",
-    "typescript-application",
-    "typescript-boilerplate",
-    "typescript-template",
-    "ts-application",
-    "ts-boilerplate",
-    "ts-template",
-    "typedoc",
-    "semantic-release",
-    "github-actions",
-    "starter-kit",
-    "ci-cd"
+    "signature",
+    "security",
+    "library"
   ],
   "scripts": {
     "check": "biome check",
@@ -42,7 +39,8 @@
     "release:test": "semantic-release --dry-run --no-ci",
     "predocs": "typedoc",
     "docs": "vitepress build .docs",
-    "docs:dev": "npm run predocs && vitepress dev .docs"
+    "docs:dev": "npm run predocs && vitepress dev .docs",
+    "clean": "rm -rf node_modules package-lock.json dist .docs/.vitepress/cache .docs/.vitepress/dist .docs/app"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

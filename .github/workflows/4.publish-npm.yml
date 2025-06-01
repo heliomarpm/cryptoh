@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_code_changes: ${{ steps.check_files.outputs.has_changes }}
-      skip_publish: true  # ⚠️ Publicação desativada. Altere para false para habilitar a publicação
+      skip_publish: false  # ⚠️ Publicação desativada. Altere para false para habilitar a publicação
 
     steps:
       - name: Checkout
@@ -116,5 +116,3 @@ jobs:
       - name: Show successfull publish
         if: success()
         run: echo "📦 Published to GHP -> ${{ github.event.release.tag_name }}"
-
-
