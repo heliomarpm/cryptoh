@@ -3,31 +3,25 @@
 layout: home
 
 hero:
-  name: "TSLib Template"
+  name: "CryptoH"
   text: ""
-  tagline: TypeScript Template, Vitest, CI/CD, semantic-release, Conventional Changelog, TypeDoc, NPM/GPR Publishing, GitHub Actions
+  tagline: A Clean and Easy-to-Use Cryptography Helper Library for Node.js
   
   actions:
     - theme: brand
       text: Documentation
       link: /app/index
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api-examples
   
   image:
     src: logo.png
-    alt: 'TSLib Template'
-    # loading: eager
-    # fetchpriority: high
-    # width: 320
-    # height: 320
+    alt: 'CryptoH'
 
 features:    
-  - icon: 🌱
-    title: TSApp Template
-    details: TypeScript Template, Vitest, CI/CD, semantic-release, Conventional Changelog, TypeDoc, GitHub Actions
-    link: https://heliomarpm.github.io/tsapp-template/
+  # - icon: 
+  #     src: https://raw.githubusercontent.com/heliomarpm/helpers/refs/heads/main/logo.png
+  #   title: Helpers Library
+  #   details: A utility for NodeJS App with many useful features
+  #   link: https://www.npmjs.com/package/@heliomarpm/helpers
     
   - icon: 
       src: https://static-production.npmjs.com/da3ab40fb0861d15c83854c29f5f2962.png

@@ -3,31 +3,16 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 // https://vitepress.dev/pt/reference/default-theme-config
 export default defineConfig({
-	title: "TSLib Template",
-	base: "/tslib-template/",
-	description: "✨ Template for Node and Typescript based libraries",
+	title: "CryptoH",
+	base: "/cryptoh/",
+	description: "🔒 A clean and easy-to-use cryptography helper library for Node.js",
 	cleanUrls: true,
-	// head: [
-	// 	["meta", { name: "msvalidate.01", content: "F4D861C3287B312C6D147ECEC9B85E5E" }],
-	// 	["meta", { name: "google-site-verification", content: "lJpOPhia4HtRabTKEdpgyB_MWRKamHC6pfjFqekWiH0" }],
-	// 	["link", { rel: "icon", type: "image/png", sizes: "32x32", href: "/images/uap-logo-transparent.png" }],
-	// 	["script", {}, 'window?.localStorage?.setItem("vitepress-theme-appearance", window?.localStorage?.getItem("vitepress-theme-appearance") ?? "dark")'],
-	// 	["script", { async: "", src: "https://analytics.umami.is/script.js", "data-website-id": "8d8f3cb0-d161-4a3c-891e-eb042af6d3a3" }],
-	// 	["script", { src: "//code.tidio.co/hu6mx7fw2r6llmfzxj5llesd5l51q5dv.js", async: "" }],
-	// ],
-	// sitemap: {
-	// 	hostname: "https://docs.uaparser.dev",
-	// },
-	// appearance: "dark",
 	lastUpdated: true,
 	ignoreDeadLinks: true,
 	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
-		// outlineTitle: 'This page',
 		logo: { src: "./logo.png", width: 24, height: 24 },
 		nav: [
 			{ text: "Guide", link: "/app/_media/CONTRIBUTING" },
-			// { text: 'Examples', link: '/markdown-examples' }
 		],
 
 		sidebar: [
@@ -47,13 +32,10 @@ export default defineConfig({
 		],
 		socialLinks: [
 			// icons 'discord' | 'facebook' | 'github'| 'instagram'| 'linkedin'| 'slack'| 'twitter'| 'youtube'
-			{ icon: "github", link: "https://github.com/heliomarpm/tslib-template" },
+			{ icon: "github", link: "https://github.com/heliomarpm/cryptoh" },
 			{
 				icon: "npm",
-				// icon: {
-				// 	svg: '<svg color="#CB3837" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>npm</title><path d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"/></svg>',
-				// },
-				link: "https://www.npmjs.com/~heliomarpm",
+				link: "https://www.npmjs.com/package/@heliomarpm/cryptoh",
 			},
 			{
 				icon: "linkedin",
@@ -85,38 +67,11 @@ export default defineConfig({
 				},
 				link: "https://navto.me/heliomarpm",
 			},
-			// {
-			// 	icon: {
-			// 		svg: '<svg color="#7FADF2" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Open Collective</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.943 11.943 0 0 0 12 0zm9.865 5.166l-3.109 3.107A7.67 7.67 0 0 1 19.715 12a7.682 7.682 0 0 1-.959 3.727l3.109 3.107A11.943 11.943 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834z"/></svg>',
-			// 	},
-			// 	link: "https://opencollective.com/ua-parser-js",
-			// },
 		],
-		// carbonAds: { code: "CW7I62JY", placement: "docsuaparserdev" },
 		footer: {
 			message: "Released under the MIT License",
 			copyright: "© 2025 <a href='https://navto.me/heliomarpm'>Heliomar P. Marques</a>",
 		},
 		lastUpdatedText: "Updated Date",
-		// editLink: {
-		// 	pattern: "https://github.com/heliomarpm/tslib-template/tree/main/.docs/:path",
-		// 	text: "Edit this page on GitHub",
-		// },
 	},
-	// markdown: {
-	// 	lineNumbers: true,
-	// 	// adjust how header anchors are generated,
-	// 	// useful for integrating with tools that use different conventions
-	// 	anchor: {
-	// 		slugify(str) {
-	// 			return encodeURIComponent(str);
-	// 		},
-	// 	},
-	// },
-	// vite: {
-	// 	build: {
-	// 		minify: "terser",
-	// 		chunkSizeWarningLimit: 1600,
-	// 	},
-	// },
 });
