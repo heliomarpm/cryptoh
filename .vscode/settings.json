@@ -1,0 +1,9 @@
+{
+  "deepscan.enable": true,
+  "editor.formatOnSave": true,
+  "typescript.validate.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  }
+}

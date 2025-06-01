@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ES2022", "DOM"],
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["test", "**/*.test.ts", "**/*.spec.ts", "node_modules", "dist", ".*"]
+}
