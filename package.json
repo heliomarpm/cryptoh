@@ -1,7 +1,6 @@
 {
-  "private": true,
   "name": "@heliomarpm/cryptoh",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A clean and easy-to-use cryptography helper library for Node.js, built on top of the native crypto module.",
   "author": "Heliomar P. Marques",
   "main": "dist/index.js",
