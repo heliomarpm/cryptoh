@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/heliomarpm/cryptoh/compare/v1.0.0...v1.1.0) (2025-06-20)
+
+
+### Features
+
+* **package:** :wastebasket: atualizar versão do Biome e remover package-lock.json do comando de limpeza ([b403ec7](https://github.com/heliomarpm/cryptoh/commit/b403ec7f04d1383f5db2ff08d4c1e06c67364cb9))
+
 # 1.0.0 (2025-06-01)
 
 
