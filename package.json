@@ -42,7 +42,7 @@
     "clean": "rm -rf node_modules coverage dist .docs/.vitepress/cache .docs/.vitepress/dist .docs/app"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.0.2",
+    "@biomejs/biome": "^2.0.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@semantic-release/changelog": "^6.0.3",
@@ -66,8 +66,8 @@
     "vitest": "^3.1.3"
   },
   "lint-staged": {
-    "*.{ts,js,json,jsonc}": [
-      "biome check --write --no-errors-on-unmatched"
+    "*.{ts,js}": [
+      "npm run test"
     ]
   },
   "config": {
