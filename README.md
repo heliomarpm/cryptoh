@@ -4,10 +4,13 @@
   <img src="./logo.png" alt="Crypto Helper" width="128" />
   <br> Cryptography Helper <a href="https://navto.me/heliomarpm" target="_blank"><img src="https://navto.me/assets/navigatetome-brand.png" width="32"/></a>
 
-  [![CodeQL][url-codeql-badge]][url-codeql]
+  [![DeepScan grade][url-deepscan-badge]][url-deepscan]
+  [![CodeFactor][url-codefactor-badge]][url-codefactor]
   [![Test][url-test-badge]][url-test]
   [![Coverage][url-coverage-badge]][url-coverage-report]
-  [![Release][url-release-badge]][url-release]
+
+  [![NPM version][url-npm-badge]][url-npm]
+  [![Downloads][url-downloads-badge]][url-downloads]
 
   <!-- ![Node.js](https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node.js&logoColor=white)
   ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
@@ -53,7 +56,7 @@ A clean and easy-to-use cryptography utility library for Node.js built on top of
 npm install @heliomarpm/cryptoh
 ```
 
-### ✏️ Example Usage
+### ✏️ Example Code
 
 ```typescript
 import cryptoh, { HashAlgorithm } from "cryptoh";
@@ -143,8 +146,9 @@ See the [API documentation](https://heliomarpm.github.io/cryptoh) for a complete
 
 ## 📦 Project Scripts
 
-* `npm run lint` — run linter and fixer
-* `npm run format` — run formatter
+* `npm run check` — runs formatter, linter and import sorting to the requested files
+* `npm run format` — run the formatter on a set of files
+* `npm run lint` — run various checks on a set of files
 * `npm run test` — run unit tests
 * `npm run test:c` — run unit tests with coverage
 * `npm run commit` - run conventional commits check
@@ -206,17 +210,16 @@ Help us maintain and improve this template:
 <!-- Sponsor badges -->
 [url-paypal-badge]: https://img.shields.io/badge/donate%20on-paypal-1C1E26?style=for-the-badge&labelColor=1C1E26&color=0475fe
 [url-paypal]: https://bit.ly/paypal-sponsor-heliomarpm
-
 [url-kofi-badge]: https://img.shields.io/badge/kofi-1C1E26?style=for-the-badge&labelColor=1C1E26&color=ff5f5f
 [url-kofi]: https://ko-fi.com/heliomarpm
-
 [url-liberapay-badge]: https://img.shields.io/badge/liberapay-1C1E26?style=for-the-badge&labelColor=1C1E26&color=f6c915
 [url-liberapay]: https://liberapay.com/heliomarpm
-
 [url-github-sponsors-badge]: https://img.shields.io/badge/GitHub%20-Sponsor-1C1E26?style=for-the-badge&labelColor=1C1E26&color=db61a2
 [url-github-sponsors]: https://github.com/sponsors/heliomarpm
 
 <!-- GitHub Actions badges -->
+[url-codeql-badge]: https://github.com/heliomarpm/cryptoh/actions/workflows/codeql.yml/badge.svg 
+[url-codeql]: https://github.com/heliomarpm/cryptoh/security/code-scanning
 [url-test-badge]: https://github.com/heliomarpm/cryptoh/actions/workflows/0.test.yml/badge.svg
 [url-test]: https://github.com/heliomarpm/cryptoh/actions/workflows/0.test.yml
 [url-coverage-badge2]: https://img.shields.io/badge/coverage-dynamic.svg?label=coverage&color=informational&style=flat&logo=jest&query=$.coverage&url=https://heliomarpm.github.io/cryptoh/coverage-badge.json
@@ -224,9 +227,18 @@ Help us maintain and improve this template:
 [url-coverage-report]: https://heliomarpm.github.io/cryptoh/coverage
 
 <!-- https://img.shields.io/endpoint?url=https://heliomarpm.github.io/cryptoh/coverage-badge.json&label=coverage&suffix=%25 -->
-
 [url-release-badge]: https://github.com/heliomarpm/cryptoh/actions/workflows/3.release.yml/badge.svg
 [url-release]: https://github.com/heliomarpm/cryptoh/actions/workflows/3.release.yml
+[url-publish-badge]: https://github.com/heliomarpm/cryptoh/actions/workflows/4.publish-npm.yml/badge.svg 
+[url-publish]: https://github.com/heliomarpm/cryptoh/actions/workflows/4.publish-npm.yml
 
-[url-codeql-badge]: https://github.com/heliomarpm/cryptoh/actions/workflows/codeql.yml/badge.svg 
-[url-codeql]: https://github.com/heliomarpm/cryptoh/security/code-scanning
+<!-- other badges -->
+[url-npm-badge]: https://img.shields.io/npm/v/@heliomarpm/cryptoh.svg
+[url-npm]: https://www.npmjs.com/package/@heliomarpm/cryptoh
+[url-downloads-badge]: https://img.shields.io/npm/dm/@heliomarpm/cryptoh.svg
+[url-downloads]: http://badge.fury.io/js/@heliomarpm/cryptoh.svg
+[url-deepscan-badge]: https://deepscan.io/api/teams/19612/projects/29822/branches/955507/badge/grade.svg
+[url-deepscan]: https://deepscan.io/dashboard#view=project&tid=19612&pid=29822&bid=955507
+[url-codefactor-badge]: https://www.codefactor.io/repository/github/heliomarpm/cryptoh/badge
+[url-codefactor]: https://www.codefactor.io/repository/github/heliomarpm/cryptoh
+
