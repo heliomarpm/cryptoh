@@ -14,7 +14,7 @@ hero:
   
   image:
     src: logo.png
-    alt: 'CryptoH'
+    alt: "CryptoH"
 
 features:    
   # - icon: 

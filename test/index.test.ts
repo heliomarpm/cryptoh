@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 import cryptoh, { HashAlgorithm } from "../src";
 
 describe("cryptoh.hash", () => {
@@ -75,7 +75,7 @@ describe("cryptoh.hash", () => {
 	});
 
 	it("should throw an error for non-string input", async () => {
-		const text = 123 as any;
+		const text = 123 as never;
 		const hash = "someHash";
 		await expect(cryptoh.hash.verify(text, hash)).rejects.toThrow();
 	});
@@ -123,7 +123,7 @@ describe("cryptoh.sign", () => {
 		const { publicKey, privateKey } = await cryptoh.keyPair.generate();
 
 		const signature = await cryptoh.sign.generate(data, privateKey);
-		const isValid = await cryptoh.sign.verify(data, signature + "00", publicKey);
+		const isValid = await cryptoh.sign.verify(data, `${signature}00`, publicKey);
 		expect(isValid).toBe(false);
 	});
 });
