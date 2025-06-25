@@ -1,9 +1,5 @@
 /**
  * CryptoH - A clean and easy-to-use cryptography helper library for Node.js
- *
- * @category Core
- * @module cryptoh
- * @author Heliomar Marques
  */
 import cryptoh, { HashAlgorithm, KeyPair } from "./core/cryptoh";
 
