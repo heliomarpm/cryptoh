@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/heliomarpm/cryptoh/compare/v1.1.0...v1.2.0) (2025-06-29)
+
+
+### Features
+
+* **test:** :sparkles: adicionar casos de teste para registro de usuário e assinatura digital ([e23a169](https://github.com/heliomarpm/cryptoh/commit/e23a169f94d2d67775f9f02bd02b28bece9f29f7))
+
 # [1.1.0](https://github.com/heliomarpm/cryptoh/compare/v1.0.0...v1.1.0) (2025-06-20)
 
 
