@@ -1,6 +1,57 @@
 import { describe, expect, it } from "vitest";
 import cryptoh, { HashAlgorithm } from "../src";
 
+describe("cryptoh usecase", () => {
+	it("real use case", async () => {
+		// 👤 User registration (secure password storage)
+		const password = "My$ecureP@ssword123";
+
+		// Generate a unique salt for the user
+		const salt = await cryptoh.random.generateSalt(16);
+		expect(salt).toBeTypeOf("string");
+		expect(salt.length).toBe(32); // 16 bytes in hex
+
+		// Concatenate password + salt and generate the hash
+		const hashedPassword = await cryptoh.hash.generate(password + salt, HashAlgorithm.SHA512);
+		expect(hashedPassword).toBeTypeOf("string");
+		expect(hashedPassword.length).toBe(128); // SHA512 produces a 64
+
+		// You would typically save this salt and hashedPassword to your database
+		const storedCredentials = { salt, hashedPassword };
+
+		// Recreate the hash with the stored salt and compare it to the stored hash
+		const isPasswordValid = await cryptoh.hash.verify(password + storedCredentials.salt, storedCredentials.hashedPassword, HashAlgorithm.SHA512);
+		expect(isPasswordValid).toBe(true);
+
+		// 🔐 Digital signature for sensitive payload (e.g., tokens, receipts, or important data)
+		const payload = JSON.stringify({
+			userId: 789,
+			email: "user@example.com",
+			timestamp: Date.now(),
+		});
+
+		// Generate an RSA key pair
+		const { publicKey, privateKey } = await cryptoh.keyPair.generate();
+		expect(publicKey).toBeTypeOf("string");
+		expect(privateKey).toBeTypeOf("string");
+
+		// Sign the payload with the private key
+		const signature = await cryptoh.sign.generate(payload, privateKey);
+		expect(signature).toBeTypeOf("string");
+		expect(signature.length).toBeGreaterThan(0); // Signature should not be empty
+		expect(signature.length).toBeLessThanOrEqual(512); // RSA signatures are typically less than
+
+		const base64Signature = Buffer.from(signature, "hex").toString("base64");
+		expect(base64Signature).toBeTypeOf("string");
+		expect(base64Signature.length).toBeGreaterThan(0); // Base64 signature should not be empty
+		expect(base64Signature.length).toBeLessThanOrEqual(768); // Base64 signature length can vary
+
+		// Verify the signature using the public key
+		const isSignatureValid = await cryptoh.sign.verify(payload, signature, publicKey);
+		expect(isSignatureValid).toBe(true);
+	});
+});
+
 describe("cryptoh.hash", () => {
 	it("should generate a hash with default algorithm (SHA512)", async () => {
 		const text = "myPassword";

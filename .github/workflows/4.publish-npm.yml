@@ -47,7 +47,7 @@ jobs:
 
   publish-npm:
     needs: check_code_changes
-    if: needs.check_code_changes.outputs.has_code_changes == 'true' 
+    if: needs.check_code_changes.outputs.has_code_changes == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read

@@ -87,8 +87,6 @@ main();
 
 ## 📚 API Reference
 
-See the [API documentation](https://heliomarpm.github.io/cryptoh) for a complete list of available functions and their signatures.
-
 ### 🔒 cryptoh.hash
 
 - Hashes the given text using the specified algorithm (default: SHA-256). \
