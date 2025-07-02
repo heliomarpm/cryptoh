@@ -118,10 +118,12 @@ main();
 
 ## 📦 Project Scripts
 
-* `npm run lint` — run linter and fixer
-* `npm run format` — run formatter
+* `npm run check` — runs formatter, linter and import sorting to the requested files
+* `npm run format` — run the formatter on a set of files
+* `npm run lint` — run various checks on a set of files
 * `npm run test` — run unit tests
 * `npm run test:c` — run unit tests with coverage
+* `npm run docs:dev` — run documentation locally
 * `npm run commit` - run conventional commits check
 * `npm run release:test` — dry run semantic release 
 * `npm run build` — build library

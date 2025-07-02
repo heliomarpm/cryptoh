@@ -50,9 +50,9 @@ export enum HashAlgorithm {
  * @param {string} input - The input string to validate.
  * @param {string} [inputName] - An optional name for the input, used in error messages.
  * @throws {Error} Will throw an error if the input is empty or whitespace.
- * @private
+ * @ignore
  */
-function validateInput(input: string, inputName?: string): void {
+function _validateInput(input: string, inputName?: string): void {
 	if (typeof input !== "string" || input.trim() === "") {
 		const name = inputName ? `${inputName.trim()} ` : "";
 		throw new Error(`Input ${name}must not be empty or whitespace.`);
@@ -156,7 +156,7 @@ const cryptoh = {
 		 * @category Generate Hash
 		 */
 		async generate(text: string, algorithm: HashAlgorithm = HashAlgorithm.SHA512): Promise<string> {
-			validateInput(text, "text");
+			_validateInput(text, "text");
 
 			const hash = createHash(algorithm);
 			hash.update(text);
@@ -182,8 +182,8 @@ const cryptoh = {
 		 * @category Verify Hash
 		 */
 		async verify(text: string, hash: string, algorithm: HashAlgorithm = HashAlgorithm.SHA512): Promise<boolean> {
-			validateInput(text, "text");
-			validateInput(hash, "hash");
+			_validateInput(text, "text");
+			_validateInput(hash, "hash");
 
 			const textBuffer = Buffer.from(await this.generate(text, algorithm), "hex");
 			const hashBuffer = Buffer.from(hash, "hex");
@@ -296,8 +296,8 @@ const cryptoh = {
 		 * @category Generate Signature
 		 */
 		async generate(data: string, privateKey: string, algorithm: HashAlgorithm = HashAlgorithm.SHA256): Promise<string> {
-			validateInput(data, "data");
-			validateInput(privateKey, "privateKey");
+			_validateInput(data, "data");
+			_validateInput(privateKey, "privateKey");
 
 			const signer = createSign(algorithm);
 			signer.update(data);
@@ -323,9 +323,9 @@ const cryptoh = {
 		 * @category Verify Signature
 		 */
 		async verify(data: string, signature: string, publicKey: string, algorithm: HashAlgorithm = HashAlgorithm.SHA256): Promise<boolean> {
-			validateInput(data, "data");
-			validateInput(signature, "signature");
-			validateInput(publicKey, "publicKey");
+			_validateInput(data, "data");
+			_validateInput(signature, "signature");
+			_validateInput(publicKey, "publicKey");
 
 			const verifier = createVerify(algorithm);
 			verifier.update(data);
