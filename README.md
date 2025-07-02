@@ -151,6 +151,7 @@ See the [API documentation](https://heliomarpm.github.io/cryptoh) for a complete
 * `npm run lint` — run various checks on a set of files
 * `npm run test` — run unit tests
 * `npm run test:c` — run unit tests with coverage
+* `npm run docs:dev` — run documentation locally
 * `npm run commit` - run conventional commits check
 * `npm run release:test` — dry run semantic release 
 * `npm run build` — build library

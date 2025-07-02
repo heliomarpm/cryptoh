@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "CryptoH"
-  text: ""
+  name: Crypto
+  text: Helper
   tagline: A Clean and Easy-to-Use Cryptography Helper Library for Node.js
   
   actions:
-    - theme: brand
+    - theme: bra
       text: Documentation
       link: /app/index
   
