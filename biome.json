@@ -33,7 +33,7 @@
         "noUnusedImports": "error"
       },
       "style": {
-        "noNonNullAssertion": "off",
+        "noNonNullAssertion": "info",
         "useAsConstAssertion": "error",
         "noParameterAssign": "error",
         "useDefaultParameterLast": "error",
@@ -63,6 +63,7 @@
     "indentWidth": 4,
     "attributePosition": "auto",
     "bracketSpacing": true,
+    "includes": ["**"],
     "lineEnding": "lf",
     "lineWidth": 180
   },
