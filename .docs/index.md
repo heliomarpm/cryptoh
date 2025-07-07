@@ -8,7 +8,7 @@ hero:
   tagline: A Clean and Easy-to-Use Cryptography Helper Library for Node.js
   
   actions:
-    - theme: bra
+    - theme: brand
       text: Documentation
       link: /app/index
   

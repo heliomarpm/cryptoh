@@ -284,7 +284,7 @@ const cryptoh = {
 		 * @example
 		 * ```js
 		 * const payload = JSON.stringify({id: 123, nome: "Heliomar", timestamp: Date.now()})
-		 * const  { publicKey, privateKey } = await cryptor.keyPair.generate();
+		 * const { publicKey, privateKey } = await cryptor.keyPair.generate();
 		 *
 		 * const signature = await cryptor.sign.generate(payload, privateKey);
 		 * console.log(Buffer.from(signature).toString("base64"));
