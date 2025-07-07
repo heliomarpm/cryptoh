@@ -24,7 +24,16 @@
     "typescript",
     "signature",
     "security",
-    "library"
+    "library",
+    "helpers-library",
+    "helpers",
+    "utils-library",
+    "utils",
+    "sha1",
+    "sha259",
+    "sha512",
+    "md5",
+    "hash"
   ],
   "scripts": {
     "check": "biome check --write",
