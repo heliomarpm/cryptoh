@@ -236,7 +236,7 @@ Help us maintain and improve this template:
 <!-- other badges -->
 [url-npm-badge]: https://img.shields.io/npm/v/@heliomarpm/cryptoh.svg
 [url-npm]: https://www.npmjs.com/package/@heliomarpm/cryptoh
-[url-downloads-badge]: https://img.shields.io/npm/dm/@heliomarpm/cryptoh.svg
+[url-downloads-badge]: https://img.shields.io/npm/d18m/@heliomarpm/cryptoh.svg
 [url-downloads]: http://badge.fury.io/js/@heliomarpm/cryptoh.svg
 [url-deepscan-badge]: https://deepscan.io/api/teams/19612/projects/29822/branches/955507/badge/grade.svg
 [url-deepscan]: https://deepscan.io/dashboard#view=project&tid=19612&pid=29822&bid=955507
