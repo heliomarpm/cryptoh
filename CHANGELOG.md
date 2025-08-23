@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/heliomarpm/cryptoh/compare/v1.2.0...v1.3.0) (2025-07-07)
+
+
+### Bug Fixes
+
+* correct typos and update biome configuration ([00abe88](https://github.com/heliomarpm/cryptoh/commit/00abe882299eda53a121d617683a7d0f81241348))
+* remove 'run' from commented vitest command in deploy workflow ([4260450](https://github.com/heliomarpm/cryptoh/commit/42604506205703a1bfdaf017a5282f3e9858bd6c))
+
+
+### Features
+
+* add semantic-release npm plugin and enhance release configuration ([1d486f3](https://github.com/heliomarpm/cryptoh/commit/1d486f32f57d1ff51d3270427ec2cd82ba4cecd5))
+
 # [1.2.0](https://github.com/heliomarpm/cryptoh/compare/v1.1.0...v1.2.0) (2025-06-29)
 
 
